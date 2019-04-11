@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>RANDOM EQUATION GAME</title>
+  </head>
+  <body>
+        <div class="container">
+                <header>
+                  <hr>
+                  <h1>RANDOM EQUATION GAME</h1>
+                  <hr>
+                </header>
+          
+                <section id="message"></section>
+          
+                <section>
+                  <p>
+                    Can you solve the following problem?!</span>
+                  </p>
+
+                  <p>First, choose your operation:</p>
+                  <div id="operations">
+                      <button id="add" onclick="startAddition()">Addition</button>
+                      <button id="subtract">Subtraction</button>
+                      <button id="multiply">Multiplication</button>
+                      <button id="divide">Division</button>
+                  </div>
+
+                  <h2>Your Question:</h2>
+                  <strong>
+                      <span id="num1">#</span> 
+                      <span id="operator">?</span>
+                      <span id="num2">#</span>
+                  </strong> 
+                  <div class="row">
+                    <div class="col-sm-9">
+                      <h3>Guess the Number:</h3>
+                      <input id="guessInput"placeholder="Answer" type="number">
+                      <button id="answerBtn"></button>
+                    </div>
+
+                    <div>
+
+                    </div>
+          
+                    <div class="col-sm-3 score">
+                      <h3>Scoreboard:</h3>
+                      <div id="score">0</div>
+                      <small>You have <span id="guessLimit">10</span> guesses to get the right answer. The number of guesses remaining will be added to your score.</small>
+                    </div>
+                  </div>
+                </section>
+            </div>
+              
+        <script type="text/javascript" src="equation.js"></script>
+  </body>
+</html>
