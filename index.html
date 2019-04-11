@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
 
     <title>RANDOM EQUATION GAME</title>
   </head>
@@ -15,7 +17,7 @@
                 </header>
           
                 <section id="message"></section>
-          
+                  message
                 <section>
                   <p>
                     Can you solve the following problem?!</span>
@@ -23,23 +25,19 @@
 
                   <p>First, choose your operation:</p>
                   <div id="operations">
-                      <button id="add" onclick="startAddition()">Addition</button>
+                      <button id="add">Addition</button>
                       <button id="subtract">Subtraction</button>
                       <button id="multiply">Multiplication</button>
                       <button id="divide">Division</button>
                   </div>
 
                   <h2>Your Question:</h2>
-                  <strong>
-                      <span id="num1">#</span> 
-                      <span id="operator">?</span>
-                      <span id="num2">#</span>
-                  </strong> 
+                  <strong id="question"># ? #</strong> 
                   <div class="row">
                     <div class="col-sm-9">
                       <h3>Guess the Number:</h3>
-                      <input id="guessInput"placeholder="Answer" type="number">
-                      <button id="answerBtn"></button>
+                      <input id="inputValue"placeholder="evaluate" type="number">
+                      <button id="inputValue" onclick="checkAnswer()">Evaluate</button>
                     </div>
 
                     <div>
