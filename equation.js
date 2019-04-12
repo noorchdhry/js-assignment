@@ -11,6 +11,17 @@ function createRandomNums(){
     num2 = (Math.floor(Math.random() * 10)) + 1; 
 }
 
+window.onload = function() {
+    console.log("ITS WORKING");
+    const oldScore = window.localStorage.getItem('oldScore');
+    if(oldScore > 0){
+        score.textContent = oldScore;
+        scoreNum;
+    } else {
+        return 0;
+    }
+  };
+
 function operations() {}
 
  
@@ -19,12 +30,18 @@ operations.prototype.initializeAddition = function(){
     createRandomNums();
     question.textContent =  num1 + " + " + num2 + " = ?";
     correctAnswer = num1 + num2;
+    window.localStorage.setItem('oldEquation', question.textContent);
+    window.localStorage.setItem('oldAnswer', correctAnswer);
+    window.localStorage.setItem('oldOperator', 'add');
 }
 
 operations.prototype.initializeSubtraction = function(){
     createRandomNums();
     question.textContent =  num1 + " - " + num2 + " = ?";
     correctAnswer = num1 - num2;
+    window.localStorage.setItem('oldEquation', question.textContent);
+    window.localStorage.setItem('oldAnswer', correctAnswer);
+    window.localStorage.setItem('oldOperator', 'subtract');
 }
 
 operations.prototype.initializeDivision = function(){
@@ -34,15 +51,46 @@ operations.prototype.initializeDivision = function(){
         r = num1 % num2;
     } while(r === 0)
      createRandomNums();
-       question.textContent =  num1 + " / " + num2 + " = ?";
-        correctAnswer = num1 / num2; 
-        
+    question.textContent =  num1 + " / " + num2 + " = ?";
+    correctAnswer = num1 / num2; 
+    window.localStorage.setItem('oldEquation', question.textContent);
+    window.localStorage.setItem('oldAnswer', correctAnswer);
+    window.localStorage.setItem('oldOperator', 'divide');
 }
 
 operations.prototype.initializeMultiplication = function(){
     createRandomNums();
     question.textContent =  num1 + " X " + num2 + " = ?";
     correctAnswer = num1 * num2;
+    window.localStorage.setItem('oldEquation', question.textContent);
+    window.localStorage.setItem('oldAnswer', correctAnswer);
+    window.localStorage.setItem('oldOperator', 'multiple');
+}
+
+function restartNum(){
+    num1 = "";
+    num2 = "";
+    correctAnswer = null;
+    inputValue.value = "";
+    question.textContent = "# ? #";
+}
+
+operations.prototype.checkAnswer = function(){
+    let guess = Number(inputValue.value);
+
+    if(correctAnswer === guess){
+        scoreNum++;
+        message.textContent =  ("You got it!! Your score is now: " + scoreNum);
+        score.textContent = scoreNum;
+        restartNum()
+        window.localStorage.setItem('oldScore', scoreNum);
+    }
+    else {
+        scoreNum--;
+        message.textContent =  ("Sorry that was't quite right, try again." + scoreNum);
+        score.textContent = scoreNum;
+        window.localStorage.setItem('oldScore', scoreNum);
+    }
 }
 
 const o = new operations;
@@ -58,28 +106,7 @@ divideBtn.onclick = o.initializeDivision;
 const multiplyBtn = document.querySelector('#multiply');
 multiplyBtn.onclick = o.initializeMultiplication;
 
-function restartNum(){
-    num1 = "";
-    num2 = "";
-    correctAnswer = null;
-    inputValue.value = "";
-    question.textContent = "# ? #";
-}
-
-function checkAnswer(){
-    let guess = Number(inputValue.value);
-
-    if(correctAnswer === guess){
-        scoreNum++;
-        message.textContent =  ("You got it!! Your score is now" + scoreNum);
-        score.textContent = scoreNum;
-        restartNum()
-    }
-    else {
-        scoreNum--;
-        message.textContent =  ("Sorry that was't quite right, try again." + scoreNum);
-        score.textContent = scoreNum;
-    }
-}
+const inputBtn = document.querySelector('#inputBtn');
+inputBtn.onclick = o.checkAnswer;
 
 
