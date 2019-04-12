@@ -25,10 +25,10 @@
 
                   <p>First, choose your operation:</p>
                   <div id="operations">
-                      <button id="add">Addition</button>
-                      <button id="subtract">Subtraction</button>
-                      <button id="multiply">Multiplication</button>
-                      <button id="divide">Division</button>
+                      <button id="add" onclick="o.initializeAddition">Addition</button>
+                      <button id="subtract"  onclick="o.initializeSubtraction">Subtraction</button>
+                      <button id="multiply" onclick="o.initializeMultiplication">Multiplication</button>
+                      <button id="divide" onclick="o.initializeDivision">Division</button>
                   </div>
 
                   <h2>Your Question:</h2>
@@ -47,7 +47,6 @@
                     <div class="col-sm-3 score">
                       <h3>Scoreboard:</h3>
                       <div id="score">0</div>
-                      <small>You have <span id="guessLimit">10</span> guesses to get the right answer. The number of guesses remaining will be added to your score.</small>
                     </div>
                   </div>
                 </section>
