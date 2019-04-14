@@ -1,4 +1,4 @@
-#Assignment for COMP1073 - Client Side JavaScript
+# Assignment for COMP1073 - Client Side JavaScript
 
 Contributors:
 Noor Chaudhry 200355528
