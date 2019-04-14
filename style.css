@@ -1,0 +1,222 @@
+html {
+  background: #e6e9e9;
+  background-color: black;
+  background-image: url(https://i.gifer.com/BXe0.gif); 
+}
+
+h1 {
+  color: crimson;
+  font-family: cursive;
+  font-style: italic;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.3;
+  font-size: 40px;     
+  border: 1px solid #ccc;  
+  width: 92%;  
+  display: inline-block;
+  margin: 0.5%;
+  padding: 1em;    
+  border-radius: 5px;
+  position:relative;  
+  border-color: #F08080;
+  border-width: thick;
+  border-style: groove; 
+        
+}
+
+section#message {
+    color: red;    
+    font-family: inherit;
+    font-size: 25px;
+     width: 94.5%;  
+}
+
+p {
+  margin: 0.5%;
+  padding: 0.1em;
+  position: relative;
+  font-family: sans-serif;
+  text-align: center;  
+  color: white;
+  font-size: 20px;    
+      
+}
+
+h2 {    
+  margin: 0.5%;  
+  position: relative;
+  font-family: sans-serif;
+  text-align: center;  
+  color: white; 
+  font-size: 25px;
+  
+}
+
+h3 {    
+  font-family: sans-serif;
+  text-align: center;  
+  color: white;
+  font-size: 20px;
+  padding: -1em;
+}
+
+a, strong {
+  font-weight: 600;
+  border: 1px solid #ccc;  
+  width: 20%;
+  min-height: 50px;
+  display: inline-block;
+  margin: 0.5%;
+  padding: 0.5em;    
+  border-radius: 5px;
+  position:relative;
+  font-family: sans-serif;
+  border-color: #F08080;
+  border-width: thick;
+  text-align: center;
+  border-style:double;  
+  background-color: gray;
+}
+
+h1 button {
+  color: red;
+}
+    
+section {
+  color: white;
+  font-weight: 600;
+  border: 1px solid #ccc;  
+  width: 95.5%;  
+  display: inline-block;
+  margin: 0.5%;
+  padding: 1em;    
+  border-radius: 5px;
+  position:relative;
+  font-family: sans-serif;
+  border-color: #F08080;
+  border-width: thick;
+  text-align: center;
+  border-style: groove;  
+  background-image: url(https://i.stack.imgur.com/p9mUO.jpg);
+    
+}
+
+button#add:hover, button#subtract:hover, button#multiply:hover, button#divide:hover, button#inputBtn:hover {
+  background-color: #FAEBD7;
+  border-style: solid;
+  border-color: #F08080;
+}
+
+input#inputValue:hover {  
+  border-style: solid;
+  border-color: #F08080;
+}
+
+button#add {
+  border: 1px solid #ccc;  
+  width: 10%;  
+  min-height: 50px;
+  display: inline-block;
+  margin: 0.5%;
+  padding: 1em;    
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: sans-serif;
+  border-style: solid;
+  border-color: black;
+  border-width: medium;
+    
+}
+
+button#subtract {
+  border: 1px solid #ccc;  
+  width: 10%;  
+  min-height: 50px;
+  display: inline-block;
+  margin: 0.5%;
+  padding: 1em;    
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: sans-serif;
+  border-style: solid;
+  border-color: black;
+  border-width: medium;
+  text-align: center;
+}
+
+button#multiply {
+  border: 1px solid #ccc;  
+  width: 10%;  
+  min-height: 50px;
+  display: inline-block;
+  margin: 0.5%;
+  padding: 1em;    
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: sans-serif;
+  border-style: solid;
+  border-color: black;
+  border-width: medium;  
+}
+
+button#divide {
+  border: 1px solid #ccc;  
+  width: 10%;  
+  min-height: 50px;
+  display: inline-block;
+  margin: 0.5%;
+  padding: 1em;    
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: sans-serif;
+  border-style: solid;
+  border-color: black;
+  border-width: medium;
+}
+
+input#inputValue {       
+  display: inline-block;  
+  padding: 0.3em; 
+  width: 15%;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: serif;
+    
+}
+
+button#inputBtn {  
+  display: inline-block;  
+  padding: 0.3em; 
+  width: 8%;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: serif;
+     
+}
+
+div#score {    
+  font-size: 35px;
+  font-family:fantasy;
+  text-align: center;  
+  color: crimson;  
+    
+}
+
+strong#question {
+  font-family: sans-serif;
+  text-align: center;  
+  background-color: #FFE4C4;
+  color: royalblue;
+  font-size: 50px;
+    
+}
+    
+    
+    
+    
+    
+    
+    
+    

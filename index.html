@@ -2,8 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
+      
+      <link rel = "stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     
 
     <title>RANDOM EQUATION GAME</title>
@@ -17,17 +20,17 @@
                 </header>
           
                 <section id="message"></section>
-                  message
+                 
                 <section>
                   <p>
-                    Can you solve the following problem?!</span>
+                    Can you solve the following problem?</span>
                   </p>
 
                   <p>First, choose your operation:</p>
                   <div id="operations">
                       <button id="add" onclick="o.initializeAddition">Addition</button>
                       <button id="subtract"  onclick="o.initializeSubtraction">Subtraction</button>
-                      <button id="multiply" onclick="o.initializeMultiplication">Multiplication</button>
+                      <button id="multiply" onclick="o.initializeMultiplication">Multiply</button>
                       <button id="divide" onclick="o.initializeDivision">Division</button>
                   </div>
 
@@ -45,8 +48,8 @@
                     </div>
           
                     <div class="col-sm-3 score">
-                      <h3>Scoreboard:</h3>
-                      <div id="score">0</div>
+                      <h3>Scoreboard: </h3>
+                      <div id="score">0</div> 
                     </div>
                   </div>
                 </section>
