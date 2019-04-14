@@ -12,11 +12,10 @@ function createRandomNums(){
 }
 
 window.onload = function() {
-    console.log("ITS WORKING");
     const oldScore = window.localStorage.getItem('oldScore');
     if(oldScore > 0){
         score.textContent = oldScore;
-        scoreNum;
+        scoreNum = oldScore;
     } else {
         return 0;
     }
@@ -78,17 +77,17 @@ function restartNum(){
 operations.prototype.checkAnswer = function(){
     let guess = Number(inputValue.value);
 
-    if(correctAnswer === guess){
+    if(correctAnswer !== guess){
+        scoreNum--;
+        message.textContent =  ("Sorry that was't quite right, try again." + scoreNum);
+        score.textContent = scoreNum;
+        window.localStorage.setItem('oldScore', scoreNum);
+    }
+    else {
         scoreNum++;
         message.textContent =  ("You got it!! Your score is now: " + scoreNum);
         score.textContent = scoreNum;
         restartNum()
-        window.localStorage.setItem('oldScore', scoreNum);
-    }
-    else {
-        scoreNum--;
-        message.textContent =  ("Sorry that was't quite right, try again." + scoreNum);
-        score.textContent = scoreNum;
         window.localStorage.setItem('oldScore', scoreNum);
     }
 }
